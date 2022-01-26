@@ -9,4 +9,6 @@ class User < ApplicationRecord
   validates :password, format: { with: VALID_PASSWORD_REGEX, massege: 'は半角英数を両方含む必要があります' }
   
   has_secure_password
+  
+  has_many :topics
 end
